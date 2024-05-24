@@ -56,6 +56,14 @@ const resetearMensaje = () => {
     <h3>{{ appStore.dato }}</h3>
     <router-link to="/pinia" class="btn btn-primary mt-3">Ir a
         Pinia</router-link>
+    <P></P>
+    <router-link to="/admin" class="btn btn-primary mt-3 mx-4">Ir a
+        Admin</router-link>
+    <P></P>
+
+    <router-link to="/public" class="btn btn-primary mt-3 mx-4">Ir a
+        public</router-link>
+
 
     <div class="container">
         <div class="row row-cols-2 ">
