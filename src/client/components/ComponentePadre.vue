@@ -1,7 +1,11 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import ComponenteHijo from './ComponenteHijo.vue';
+import { useAppStore } from "../stores/index.js";
 
+
+
+const appStore = useAppStore();
 const mensaje = ref(null)
 const tareas = ref([])
 const mensajePadre = ref('Hola desde el padre');
@@ -42,12 +46,6 @@ function actualizarTarea(index) {
         });
 }
 
-
-
-
-
-
-
 const resetearMensaje = () => {
     mensajePadre.value = 'Hola desde el padre';
 }
@@ -55,6 +53,9 @@ const resetearMensaje = () => {
 
 <template>
     <h2 v-if="mensaje">{{ mensaje }}</h2>
+    <h3>{{ appStore.dato }}</h3>
+    <router-link to="/pinia" class="btn btn-primary mt-3">Ir a
+        Pinia</router-link>
 
     <div class="container">
         <div class="row row-cols-2 ">
